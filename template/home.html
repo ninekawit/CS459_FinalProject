@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%;position: fixed;">
+  <h3 class="w3-bar-item">Menu</h3>
+  <a href="http://127.0.0.1:8000/#" class="w3-bar-item w3-button">Homepage</a>
+  <a href="item_list" class="w3-bar-item w3-button">Product</a>
+  <a href="cart_list" class="w3-bar-item w3-button">Cart</a>
+ 
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:26%;">
+
+<div class="w3-container" style="background-color: darksalmon;">
+  <h1><b>H o m e p a g e</b></h1>
+</div>
+
+<div class="w3-content w3-section" style="max-width:1080px;">
+  
+    <img class="mySlides w3-animate-fading" src="../media/mi9.jpg" style="width:100%">
+    <img class="mySlides w3-animate-fading" src="../media/iPhone-XS.jpeg" style="width:100%">
+    <img class="mySlides w3-animate-fading" src="../media/real 3.jpg" style="width:100%">
+    <img class="mySlides w3-animate-fading" src="../media/s10p.jpg" style="width:100%">
+  </div>
+  <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 9000);    
+    }
+    </script>
+  
+
+<div class="w3-container">
+<h1><center>ABOUT OF NTMobileShop</center></h1>
+<hr>
+<p><center>The best mobile sales website in the country Is a website that is compiled with many mobile phone brands, including Apple, Xiaomi, Huawei, Samsung and many more, for users to buy and select. Within our website is a design that is easy to use. Convenient to search And booking that can be booked in the cart before ordering If the user still wants to see other products as well But to access our website to order products is easy. By subscribing and then enjoy the product selection !!</center></p>
+
+</div>
+
+</div>
+      
+</body>
+</html>
+
+{% endblock %}

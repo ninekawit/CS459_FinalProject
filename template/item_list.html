@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<head> 
+
+    <style>
+        .center {
+          margin: auto;
+          width: 80%;
+          padding: 10px;
+        }
+        </style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:10%;height: 500px;margin-top: 50px;">
+    <h3 class="w3-bar-item">Menu</h3>
+    <a href="http://127.0.0.1:8000/#" class="w3-bar-item w3-button">Homepage</a>
+    <a href="item_list" class="w3-bar-item w3-button">Product</a>
+    <a href="cart_list" class="w3-bar-item w3-button">Cart</a>
+  </div>
+  <ul>
+    </head>
+<body>
+  <div class = center>
+        {% for i in items %}
+      <div class="card" style="width:200px">
+          <img class="card-img-top" src="{{i.image.url}}" alt="Card image">
+          <div class="card-body">
+              <h4 class="card-title">{{ i.name }}</h4>
+              <p class="card-text">{{ i.description }}</p>
+              <a href="#" class="btn btn-primary">buy</a>
+          </div>
+      </div>
+
+    {% endfor %}
+  </div>
+
+  </ul>
+  
+</body>
+  </html>
+{% endblock %}

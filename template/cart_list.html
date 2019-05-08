@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %}
+<html>
+ <head>
+
+<div style="margin-top: 10px;padding-left: 5px;background-color: darksalmon;color: #fff">
+  <h1><b>Cart</b></h1>
+</div>
+<hr>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #ffffff}
+
+th {
+  background-color: rgb(224, 224, 224);
+  color: rgb(139, 139, 139);
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Quantity</th>
+    <th>Product</th>
+    <th>Price(Bath)</th>
+    <th>Add</th>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td><img src="https://i.gadgets360cdn.com/products/large/1521537947_635_huawei_nova_3e.jpg" style="width: 100px;height: 100px;"></td>
+    <td>฿11,490</td>
+    <td><button style = "background-color:rgb(196, 196, 196);">+</button> - 
+    <button style = "background-color:rgb(196, 196, 196);padding-left: 7.5px;padding-right: 7.5px;"> - </button></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><img src="https://i.gadgets360cdn.com/products/large/1529877080_635_xiaomi_redmi_6_pro.jpg" style="width: 100px;height: 100px;"></td>
+    <td>฿12,490</td>
+    <td><button style = "background-color:rgb(196, 196, 196);">+</button> - 
+      <button style = "background-color:rgb(196, 196, 196);padding-left: 7.5px;padding-right: 7.5px;"> - </button></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td><img src="https://qmart.pk/image/cache/catalog/Apple-iPhones/Apple-iPhone-XS/Apple-iPhone-XS-Qmart-1-635x476.jpg" style="width: 100px;height: 100px;"></td>
+    <td>฿39,990</td>
+    <td><button style = "background-color:rgb(196, 196, 196);">+</button> - 
+      <button style = "background-color:rgb(196, 196, 196);padding-left: 7.5px;padding-right: 7.5px;"> - </button></td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td><img src="https://drop.ndtv.com/TECH/product_database/images/982016125448AM_635_iphone_7_plus.jpeg" style="width: 100px;height: 100px;"></td>
+    <td>฿19,990</td>
+    <td><button style = "background-color:rgb(196, 196, 196);">+</button> - 
+      <button style = "background-color:rgb(196, 196, 196);padding-left: 7.5px;padding-right: 7.5px;"> - </button></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+{% endblock %}
